@@ -8,8 +8,8 @@ import (
 	"github.com/byterotom/infinity-play/internal/auth"
 	"github.com/byterotom/infinity-play/internal/db/dbgen"
 	"github.com/byterotom/infinity-play/pkg"
-	"github.com/byterotom/infinity-play/views"
-	"github.com/byterotom/infinity-play/views/components"
+	"github.com/byterotom/infinity-play/templates"
+	"github.com/byterotom/infinity-play/templates/components"
 )
 
 func formHandler(w http.ResponseWriter, r *http.Request) {
@@ -24,7 +24,7 @@ func formHandler(w http.ResponseWriter, r *http.Request) {
 		}
 		return
 	}
-	views.Index(components.Admin(act)).Render(r.Context(), w)
+	templates.Index(components.Admin(act)).Render(r.Context(), w)
 }
 
 func (mux *AdminMux) login(w http.ResponseWriter, r *http.Request) {

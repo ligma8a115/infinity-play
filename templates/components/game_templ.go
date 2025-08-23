@@ -41,7 +41,7 @@ func Game(game *dbgen.Game) templ.Component {
 		}
 		templ_7745c5c3_Var2, templ_7745c5c3_Err := templruntime.ScriptContentOutsideStringLiteral(game.ID)
 		if templ_7745c5c3_Err != nil {
-			return templ.Error{Err: templ_7745c5c3_Err, FileName: `views/components/game.templ`, Line: 11, Col: 27}
+			return templ.Error{Err: templ_7745c5c3_Err, FileName: `templates/components/game.templ`, Line: 11, Col: 27}
 		}
 		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ_7745c5c3_Var2)
 		if templ_7745c5c3_Err != nil {
@@ -54,7 +54,7 @@ func Game(game *dbgen.Game) templ.Component {
 		var templ_7745c5c3_Var3 string
 		templ_7745c5c3_Var3, templ_7745c5c3_Err = templ.JoinStringErrs(pkg.Capital(game.Name))
 		if templ_7745c5c3_Err != nil {
-			return templ.Error{Err: templ_7745c5c3_Err, FileName: `views/components/game.templ`, Line: 18, Col: 29}
+			return templ.Error{Err: templ_7745c5c3_Err, FileName: `templates/components/game.templ`, Line: 18, Col: 29}
 		}
 		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var3))
 		if templ_7745c5c3_Err != nil {
@@ -77,7 +77,7 @@ func Game(game *dbgen.Game) templ.Component {
 			var templ_7745c5c3_Var4 string
 			templ_7745c5c3_Var4, templ_7745c5c3_Err = templ.JoinStringErrs(fmt.Sprintf("/game/swf/%s", game.ID))
 			if templ_7745c5c3_Err != nil {
-				return templ.Error{Err: templ_7745c5c3_Err, FileName: `views/components/game.templ`, Line: 37, Col: 50}
+				return templ.Error{Err: templ_7745c5c3_Err, FileName: `templates/components/game.templ`, Line: 37, Col: 50}
 			}
 			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var4))
 			if templ_7745c5c3_Err != nil {
@@ -95,7 +95,7 @@ func Game(game *dbgen.Game) templ.Component {
 		var templ_7745c5c3_Var5 string
 		templ_7745c5c3_Var5, templ_7745c5c3_Err = templ.JoinStringErrs(fmt.Sprintf("/game/vote/%s?v=like", game.ID))
 		if templ_7745c5c3_Err != nil {
-			return templ.Error{Err: templ_7745c5c3_Err, FileName: `views/components/game.templ`, Line: 58, Col: 60}
+			return templ.Error{Err: templ_7745c5c3_Err, FileName: `templates/components/game.templ`, Line: 58, Col: 60}
 		}
 		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var5))
 		if templ_7745c5c3_Err != nil {
@@ -108,7 +108,7 @@ func Game(game *dbgen.Game) templ.Component {
 		var templ_7745c5c3_Var6 string
 		templ_7745c5c3_Var6, templ_7745c5c3_Err = templ.JoinStringErrs(fmt.Sprintf("/game/vote/%s?v=dislike", game.ID))
 		if templ_7745c5c3_Err != nil {
-			return templ.Error{Err: templ_7745c5c3_Err, FileName: `views/components/game.templ`, Line: 70, Col: 63}
+			return templ.Error{Err: templ_7745c5c3_Err, FileName: `templates/components/game.templ`, Line: 70, Col: 63}
 		}
 		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var6))
 		if templ_7745c5c3_Err != nil {
@@ -122,7 +122,7 @@ func Game(game *dbgen.Game) templ.Component {
 			var templ_7745c5c3_Var7 string
 			templ_7745c5c3_Var7, templ_7745c5c3_Err = templ.JoinStringErrs(fmt.Sprintf("%.1f/5.0 (%d votes)", float64(game.Likes*5/game.Votes), game.Votes))
 			if templ_7745c5c3_Err != nil {
-				return templ.Error{Err: templ_7745c5c3_Err, FileName: `views/components/game.templ`, Line: 90, Col: 92}
+				return templ.Error{Err: templ_7745c5c3_Err, FileName: `templates/components/game.templ`, Line: 90, Col: 92}
 			}
 			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var7))
 			if templ_7745c5c3_Err != nil {
@@ -132,7 +132,7 @@ func Game(game *dbgen.Game) templ.Component {
 			var templ_7745c5c3_Var8 string
 			templ_7745c5c3_Var8, templ_7745c5c3_Err = templ.JoinStringErrs(fmt.Sprintf("0.0/5.0 (%d votes)", game.Votes))
 			if templ_7745c5c3_Err != nil {
-				return templ.Error{Err: templ_7745c5c3_Err, FileName: `views/components/game.templ`, Line: 92, Col: 53}
+				return templ.Error{Err: templ_7745c5c3_Err, FileName: `templates/components/game.templ`, Line: 92, Col: 53}
 			}
 			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var8))
 			if templ_7745c5c3_Err != nil {
@@ -146,7 +146,7 @@ func Game(game *dbgen.Game) templ.Component {
 		var templ_7745c5c3_Var9 string
 		templ_7745c5c3_Var9, templ_7745c5c3_Err = templ.JoinStringErrs(pkg.Capital(game.Technology))
 		if templ_7745c5c3_Err != nil {
-			return templ.Error{Err: templ_7745c5c3_Err, FileName: `views/components/game.templ`, Line: 95, Col: 93}
+			return templ.Error{Err: templ_7745c5c3_Err, FileName: `templates/components/game.templ`, Line: 95, Col: 93}
 		}
 		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var9))
 		if templ_7745c5c3_Err != nil {
@@ -159,7 +159,7 @@ func Game(game *dbgen.Game) templ.Component {
 		var templ_7745c5c3_Var10 string
 		templ_7745c5c3_Var10, templ_7745c5c3_Err = templ.JoinStringErrs(game.Description)
 		if templ_7745c5c3_Err != nil {
-			return templ.Error{Err: templ_7745c5c3_Err, FileName: `views/components/game.templ`, Line: 98, Col: 24}
+			return templ.Error{Err: templ_7745c5c3_Err, FileName: `templates/components/game.templ`, Line: 98, Col: 24}
 		}
 		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var10))
 		if templ_7745c5c3_Err != nil {

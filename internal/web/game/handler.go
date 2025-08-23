@@ -11,8 +11,8 @@ import (
 
 	"github.com/byterotom/infinity-play/internal/db/dbgen"
 	"github.com/byterotom/infinity-play/pkg"
-	"github.com/byterotom/infinity-play/views"
-	"github.com/byterotom/infinity-play/views/components"
+	"github.com/byterotom/infinity-play/templates"
+	"github.com/byterotom/infinity-play/templates/components"
 	"github.com/jackc/pgx/v5"
 )
 
@@ -146,7 +146,7 @@ func (mux *GameMux) getGameData(w http.ResponseWriter, r *http.Request) {
 		components.Game(&game).Render(r.Context(), w)
 		return
 	}
-	views.Index(components.Game(&game)).Render(r.Context(), w)
+	templates.Index(components.Game(&game)).Render(r.Context(), w)
 }
 
 func (mux *GameMux) getGameFile(w http.ResponseWriter, r *http.Request) {

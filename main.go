@@ -44,5 +44,6 @@ func main() {
 	<-sigChan
 
 	srv.Shutdown(ctx)
+	log.Println("infinity server shut down")
 
 }

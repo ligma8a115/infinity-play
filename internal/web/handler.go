@@ -7,8 +7,8 @@ import (
 
 	"github.com/byterotom/infinity-play/internal/db/dbgen"
 	"github.com/byterotom/infinity-play/pkg"
-	"github.com/byterotom/infinity-play/views"
-	"github.com/byterotom/infinity-play/views/components"
+	"github.com/byterotom/infinity-play/templates"
+	"github.com/byterotom/infinity-play/templates/components"
 )
 
 func (mux *InfinityMux) category(w http.ResponseWriter, r *http.Request) {
@@ -47,7 +47,7 @@ func (mux *InfinityMux) category(w http.ResponseWriter, r *http.Request) {
 		components.Tag(cat, false, false, games).Render(r.Context(), w)
 		return
 	}
-	views.Index(components.Tag(cat, false, false, games)).Render(r.Context(), w)
+	templates.Index(components.Tag(cat, false, false, games)).Render(r.Context(), w)
 }
 
 func (mux *InfinityMux) home(w http.ResponseWriter, r *http.Request) {
@@ -84,7 +84,7 @@ func (mux *InfinityMux) home(w http.ResponseWriter, r *http.Request) {
 		components.Home(games).Render(r.Context(), w)
 		return
 	}
-	views.Index(components.Home(games)).Render(r.Context(), w)
+	templates.Index(components.Home(games)).Render(r.Context(), w)
 }
 
 func (mux *InfinityMux) searchGame(w http.ResponseWriter, r *http.Request) {
@@ -110,6 +110,6 @@ func (mux *InfinityMux) searchGame(w http.ResponseWriter, r *http.Request) {
 	if pkg.IsHTMXRequest(r) {
 		components.Tag(pattern, true, del, games).Render(r.Context(), w)
 	} else {
-		views.Index(components.Tag(pattern, true, del, games)).Render(r.Context(), w)
+		templates.Index(components.Tag(pattern, true, del, games)).Render(r.Context(), w)
 	}
 }

@@ -16,7 +16,6 @@ templ Card(game *dbgen.Game) {
 	>
 		<!-- Image container -->
 		<div class="relative w-full h-40 overflow-hidden">
-			<!-- Static thumbnail image -->
 			<img
 				src={ fmt.Sprintf("/game/thumbnail/%s", game.ID) }
 				alt="Game Thumbnail"

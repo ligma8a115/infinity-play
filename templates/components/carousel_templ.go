@@ -42,7 +42,7 @@ func Carousel(category string, games []dbgen.Game) templ.Component {
 		var templ_7745c5c3_Var2 string
 		templ_7745c5c3_Var2, templ_7745c5c3_Err = templ.JoinStringErrs(pkg.Capital(category))
 		if templ_7745c5c3_Err != nil {
-			return templ.Error{Err: templ_7745c5c3_Err, FileName: `views/components/carousel.templ`, Line: 13, Col: 26}
+			return templ.Error{Err: templ_7745c5c3_Err, FileName: `templates/components/carousel.templ`, Line: 13, Col: 26}
 		}
 		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var2))
 		if templ_7745c5c3_Err != nil {
@@ -55,7 +55,7 @@ func Carousel(category string, games []dbgen.Game) templ.Component {
 		var templ_7745c5c3_Var3 string
 		templ_7745c5c3_Var3, templ_7745c5c3_Err = templ.JoinStringErrs(fmt.Sprintf("carousel-left-%s", category))
 		if templ_7745c5c3_Err != nil {
-			return templ.Error{Err: templ_7745c5c3_Err, FileName: `views/components/carousel.templ`, Line: 19, Col: 50}
+			return templ.Error{Err: templ_7745c5c3_Err, FileName: `templates/components/carousel.templ`, Line: 19, Col: 50}
 		}
 		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var3))
 		if templ_7745c5c3_Err != nil {
@@ -68,7 +68,7 @@ func Carousel(category string, games []dbgen.Game) templ.Component {
 		var templ_7745c5c3_Var4 string
 		templ_7745c5c3_Var4, templ_7745c5c3_Err = templ.JoinStringErrs(fmt.Sprintf("carousel-track-%s", category))
 		if templ_7745c5c3_Err != nil {
-			return templ.Error{Err: templ_7745c5c3_Err, FileName: `views/components/carousel.templ`, Line: 26, Col: 51}
+			return templ.Error{Err: templ_7745c5c3_Err, FileName: `templates/components/carousel.templ`, Line: 26, Col: 51}
 		}
 		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var4))
 		if templ_7745c5c3_Err != nil {
@@ -99,7 +99,7 @@ func Carousel(category string, games []dbgen.Game) templ.Component {
 		var templ_7745c5c3_Var5 string
 		templ_7745c5c3_Var5, templ_7745c5c3_Err = templ.JoinStringErrs(fmt.Sprintf("carousel-right-%s", category))
 		if templ_7745c5c3_Err != nil {
-			return templ.Error{Err: templ_7745c5c3_Err, FileName: `views/components/carousel.templ`, Line: 44, Col: 51}
+			return templ.Error{Err: templ_7745c5c3_Err, FileName: `templates/components/carousel.templ`, Line: 44, Col: 51}
 		}
 		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var5))
 		if templ_7745c5c3_Err != nil {
@@ -111,7 +111,7 @@ func Carousel(category string, games []dbgen.Game) templ.Component {
 		}
 		templ_7745c5c3_Var6, templ_7745c5c3_Err := templruntime.ScriptContentOutsideStringLiteral(category)
 		if templ_7745c5c3_Err != nil {
-			return templ.Error{Err: templ_7745c5c3_Err, FileName: `views/components/carousel.templ`, Line: 53, Col: 26}
+			return templ.Error{Err: templ_7745c5c3_Err, FileName: `templates/components/carousel.templ`, Line: 53, Col: 26}
 		}
 		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ_7745c5c3_Var6)
 		if templ_7745c5c3_Err != nil {

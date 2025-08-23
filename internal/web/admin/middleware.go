@@ -4,8 +4,8 @@ import (
 	"net/http"
 
 	"github.com/byterotom/infinity-play/internal/auth"
-	"github.com/byterotom/infinity-play/views"
-	"github.com/byterotom/infinity-play/views/components"
+	"github.com/byterotom/infinity-play/templates"
+	"github.com/byterotom/infinity-play/templates/components"
 )
 
 func loggedIn(next http.HandlerFunc) http.HandlerFunc {
@@ -21,7 +21,7 @@ func loggedIn(next http.HandlerFunc) http.HandlerFunc {
 				Secure:   true,
 				SameSite: http.SameSiteLaxMode,
 			})
-			views.Index(components.Login()).Render(r.Context(), w)
+			templates.Index(components.Login()).Render(r.Context(), w)
 			return
 		}
 		tokenString := cook.Value
@@ -36,7 +36,7 @@ func loggedIn(next http.HandlerFunc) http.HandlerFunc {
 				Secure:   true,
 				SameSite: http.SameSiteLaxMode,
 			})
-			views.Index(components.Login()).Render(r.Context(), w)
+			templates.Index(components.Login()).Render(r.Context(), w)
 			return
 		}
 		next.ServeHTTP(w, r)
