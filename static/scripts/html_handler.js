@@ -1,6 +1,6 @@
 import { unzipSync } from 'https://cdn.skypack.dev/fflate';
 
-await navigator.serviceWorker.register('/static/sw.js', { scope: '/' });
+await navigator.serviceWorker.register('/static/scripts/sw.js', { scope: '/' });
 await navigator.serviceWorker.ready;
 
 if (!navigator.serviceWorker.controller) {

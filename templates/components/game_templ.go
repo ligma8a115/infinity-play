@@ -65,7 +65,7 @@ func Game(game *dbgen.Game) templ.Component {
 			return templ_7745c5c3_Err
 		}
 		if game.Technology == dbgen.TechHtml {
-			templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 4, "<iframe width=\"800\" height=\"500\" class=\"border border-gray-600 rounded-lg shadow-lg\" id=\"gameObject\"></iframe><script type=\"module\" src=\"/static/html_handler.js\"></script>")
+			templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 4, "<iframe width=\"800\" height=\"500\" class=\"border border-gray-600 rounded-lg shadow-lg\" id=\"gameObject\"></iframe><script type=\"module\" src=\"/static/scripts/html_handler.js\"></script>")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
@@ -165,7 +165,7 @@ func Game(game *dbgen.Game) templ.Component {
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 12, "</p></div></div></div></div><script src=\"/static/game.js\"></script>")
+		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 12, "</p></div></div></div></div><script src=\"/static/scripts/game.js\"></script>")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}

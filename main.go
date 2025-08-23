@@ -16,7 +16,7 @@ import (
 	"github.com/byterotom/infinity-play/pkg"
 )
 
-//go:embed static/**
+//go:embed static/images/* static/scripts/*
 var staticFiles embed.FS
 
 func main() {
